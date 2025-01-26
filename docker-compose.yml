@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres
+    container_name: finance-api-pg
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=finance
+    ports:
+      - '5432:5432'
