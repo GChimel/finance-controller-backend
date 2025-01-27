@@ -29,7 +29,10 @@ export class BankAccountsService {
     bankAccountId: string,
     updateBankAccountDto: UpdateBankAccountDto,
   ) {
-    this.validateBankAccountOwnershipService.validate(userId, bankAccountId);
+    await this.validateBankAccountOwnershipService.validate(
+      userId,
+      bankAccountId,
+    );
 
     const { color, initialBalance, name, type } = updateBankAccountDto;
 
